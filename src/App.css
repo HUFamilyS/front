@@ -11,6 +11,9 @@
 .mobile {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   width: 70vh;
   height: 100%;
+  padding-top: 5rem;
+  padding-bottom: 10rem; /* footer 높이만큼 padding 추가 */
 }

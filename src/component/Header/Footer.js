@@ -10,10 +10,10 @@ const menuItems = [
   { src: home, label: "Home", path: "/" },
   { src: purchase, label: "공동구매", path: "/purchase" },
   { src: recommendation, label: "레시피추천", path: "/" },
-  { src: my, label: "MY", path: "/" },
+  { src: my, label: "MY", path: "/mypage" },
 ];
 
-export default function Navbar() {
+export default function Footer() {
   return (
     <div className={styles.footerContainer}>
       {menuItems.map((item, index) => (

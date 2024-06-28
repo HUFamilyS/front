@@ -4,9 +4,10 @@ import Navbar from "./component/Header/Navbar";
 import Footer from "./component/Header/Footer";
 import Main from "./component/main/main";
 import Loading from "./component/loading/loading";
+import MY from "./component/My/myPage";
+import SignUp from "./component/My/signUp";
 
 import "../src/App.css";
-import Purchase from "./component/main/purchase";
 
 function App() {
   return (
@@ -17,10 +18,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/loading" element={<Loading />} />
-            <Route path="/purchase" element={<Purchase />} />
+            <Route path="/mypage" element={<MY />} />
+            <Route path="/signup" element={<SignUp />} />
           </Routes>
-          <Footer />
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );
