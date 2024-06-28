@@ -5,12 +5,14 @@ import Footer from "./component/Header/Footer";
 import Main from "./component/main/main";
 import Loading from "./component/loading/loading";
 import MY from "./component/My/myPage";
+import SignUp from "./component/My/signUp";
 import Recipe from "./component/recipe/page/Recmain";
 
-
 import "../src/App.css";
-import Purchase from "./component/main/purchase";
-
+import Purchase from "./component/purchase/purchase";
+import MakeProom from "./component/purchase/makeProom";
+import View from "./component/recipe/page/Recview";
+import Write from"./component/recipe/page/Recwrite";
 function App() {
   return (
     <div className="App">
@@ -20,12 +22,16 @@ function App() {
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/loading" element={<Loading />} />
-            <Route path="/purchase" element={<Purchase />} />
             <Route path="/mypage" element={<MY />} />
-            <Route path="/Recmain" element={<Recipe />}/>
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/purchase" element={<Purchase />} />
+            <Route path="/purchase/:id" element={<MakeProom />} />
+            <Route path="/recipe" element={<Recipe />} />
+            <Route path="/view" element={<View />}/>
+            <Route path="/write" element={<Write />} />
           </Routes>
-          <Footer />
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );
