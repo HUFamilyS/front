@@ -7,13 +7,11 @@ import { Link } from "react-router-dom";
 import WriteButton from "../rec_ui/rec_writebutton";
 
 export default function Recmain() {
-  const navigate = useNavigate();
   return (
     <div>
       <h3 className={styles.category}>레시피 추천</h3>
       <WriteButton />
       <Button />
     </div>
-    
   );
 }

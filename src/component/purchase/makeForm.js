@@ -72,7 +72,7 @@ export default function MakeForm() {
     console.log(formData);
     try {
       const response = await axiosInstance.post("/post", formData, {
-        headers: { Authorization: "token" },
+        headers: { Authorization: "Bearer " + localStorage.getItem("token") },
       });
       console.log("Success:", response.data);
       // 서버 응답에 따라 추가 작업 수행
