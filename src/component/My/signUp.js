@@ -51,7 +51,9 @@ export default function SignUp() {
         email: formData.email,
         password: formData.password,
       });
-      if (response.status === 201) {
+
+      if (response.status === 200) {
+        alert("회원가입이 완료되었습니다.");
         navigate("/"); // 회원가입 후 홈으로 이동
       } else {
         alert("회원가입에 실패했습니다. 다시 시도해주세요.");
