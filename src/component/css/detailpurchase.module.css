@@ -8,7 +8,9 @@
   padding: 20px;
   box-sizing: border-box;
 }
-
+a {
+  text-decoration-line: none;
+}
 .box {
   display: flex;
   flex-direction: column;
