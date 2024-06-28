@@ -5,6 +5,7 @@
   align-items: center;
   background-color: #ebebeb;
   padding: 20px;
+  height: 100vh;
 }
 
 h3 {
@@ -15,18 +16,27 @@ h3 {
 .roomlist {
   display: flex;
   flex-direction: row;
-
   height: 100px;
   width: 300px;
   background-color: #ffffff;
 }
 
 .room {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  height: 70%;
+  padding: 20px;
+  margin: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-size: 20px;
+  box-sizing: border-box;
   text-align: center;
 }
+
 .discount {
   color: #45bc53;
   font-size: larger;
