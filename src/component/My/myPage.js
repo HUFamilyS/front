@@ -14,7 +14,7 @@ export default function myPage() {
             <Link className={styles.btn} to="/signup">
               <div>회원가입</div>
             </Link>
-            <Link className={styles.btn} to="/">
+            <Link className={styles.btn} to="/login">
               <div>로그인</div>
             </Link>
           </div>

@@ -6,6 +6,8 @@ import Main from "./component/main/main";
 import Loading from "./component/loading/loading";
 import MY from "./component/My/myPage";
 import SignUp from "./component/My/signUp";
+import Login from "./component/My/loginPage";
+import MyInformation from "./component/My/myInformation";
 import Recipe from "./component/recipe/page/Recmain";
 
 import "../src/App.css";
@@ -23,6 +25,8 @@ function App() {
             <Route path="/loading" element={<Loading />} />
             <Route path="/mypage" element={<MY />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/myinformation" element={<MyInformation />} />
             <Route path="/purchase" element={<Purchase />} />
             <Route path="/purchase/:id" element={<MakeProom />} />
             <Route path="/recipe" element={<Recipe />} />

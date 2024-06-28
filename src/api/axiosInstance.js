@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://jjweidon.pythonanywhere.com",
+  baseURL: "http://152.69.225.60/",
   timeout: 1000,
-  headers: { "X-Custom-Header": "foobar" },
+  // headers: { "X-Custom-Header": "foobar" },
 });
