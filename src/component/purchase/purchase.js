@@ -1,9 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import styles from "../css/purchase.module.css";
+import vegetables from "../img/vegetable.svg";
 
 export default function Purchase() {
   const foodItems = [
-    { id: 1, name: "야채/채소" },
+    { id: 1, name: "야채/채소", imageUrl: vegetables },
     { id: 2, name: "쌀/잡곡/즉석밥" },
     { id: 3, name: "닭가슴살" },
     { id: 4, name: "과일" },
@@ -45,7 +46,13 @@ export default function Purchase() {
                 key={item.id}
                 onClick={() => goToPage(item.id)}
               >
-                <div className={styles.item}></div>
+                <div className={styles.item}>
+                  <img
+                    src={item.imageUrl}
+                    alt={item.name}
+                    className={styles.itemImage}
+                  />
+                </div>
                 <div className={styles.itemName}>{item.name}</div>
               </div>
             ))}
@@ -60,7 +67,13 @@ export default function Purchase() {
                 key={item.id}
                 onClick={() => goToPage(item.id)}
               >
-                <div className={styles.item}></div>
+                <div className={styles.item}>
+                  <img
+                    src={item.imageUrl}
+                    alt={item.name}
+                    className={styles.itemImage}
+                  />
+                </div>
                 <div className={styles.itemName}>{item.name}</div>
               </div>
             ))}
@@ -75,7 +88,13 @@ export default function Purchase() {
                 key={item.id}
                 onClick={() => goToPage(item.id)}
               >
-                <div className={styles.item}></div>
+                <div className={styles.item}>
+                  <img
+                    src={item.imageUrl}
+                    alt={item.name}
+                    className={styles.itemImage}
+                  />
+                </div>
                 <div className={styles.itemName}>{item.name}</div>
               </div>
             ))}
