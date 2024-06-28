@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import Button from "../rec_ui/rec_button";
+import BackButton from "../rec_ui/rec_back";
 import styles from "../../css/recwrite.module.css";
 
 export default function Recwrite() {
@@ -15,12 +15,7 @@ export default function Recwrite() {
     <>
       <div>
         <h3>레시피 추천</h3>
-        <Button
-          title='돌아가기'
-          onClick={() => {
-          navigate('/recipe');
-          }}
-                />
+        <BackButton />
          {inputs.map((input, index) => (
             <div key={index} className={styles.inputDiv}>
               <span>{input.label}</span>
