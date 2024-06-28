@@ -19,8 +19,8 @@ function App() {
             <Route path="/loading" element={<Loading />} />
             <Route path="/mypage" element={<MY />} />
           </Routes>
-          <Footer />
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );
