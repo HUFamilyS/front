@@ -40,4 +40,5 @@ button {
   border: 0;
   color: #878787;
   margin-top: 20px; /* 버튼 위에 여백 추가 */
+  font-size: 20px;
 }
