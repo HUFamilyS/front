@@ -1,13 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "../css/login.module.css";
 import logo from "../img/logoCircle.svg";
+import axiosInstance from "../../api/axiosInstance";
 
-export default function login() {
-  const inputs = [
-    { label: "별명", placeholder: "자신의 별명을 입력하세요" },
-    { label: "비밀번호", placeholder: "비밀번호를 입력하세요" },
-  ];
+export default function Login() {
+  const navigate = useNavigate();
+  const [nickname, setNickname] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axiosInstance.post("/login", {
+        nickname,
+        password,
+      });
+      alert("로그인에 성공했습니다!");
+      navigate("/"); // 로그인 성공 시 메인 페이지로 이동
+    } catch (error) {
+      console.error("로그인 중 오류 발생:", error);
+      alert("로그인에 실패했습니다. 다시 시도해주세요.");
+    }
+  };
 
   return (
     <>
@@ -16,17 +31,31 @@ export default function login() {
         <h4 className={styles.categoryDetail}>로그인</h4>
         <div className={styles.signUpContent}>
           <img src={logo} alt="Logo" />
-          {inputs.map((input, index) => (
-            <div key={index} className={styles.inputDiv}>
-              <span>{input.label}</span>
-              <input type="text" placeholder={input.placeholder} />
+          <form onSubmit={handleSubmit}>
+            <div className={styles.inputDiv}>
+              <span>별명</span>
+              <input
+                type="text"
+                placeholder="자신의 별명을 입력하세요"
+                value={nickname}
+                onChange={(e) => setNickname(e.target.value)}
+              />
             </div>
-          ))}
-          <div className={styles.buttonDiv}>
-            <Link className={styles.btn} to="/">
-              <div>로그인</div>
-            </Link>
-          </div>
+            <div className={styles.inputDiv}>
+              <span>비밀번호</span>
+              <input
+                type="password"
+                placeholder="비밀번호를 입력하세요"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <div className={styles.buttonDiv}>
+              <button type="submit" className={styles.btn}>
+                로그인
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </>
