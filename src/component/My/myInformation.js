@@ -7,6 +7,7 @@ import axiosInstance from "../../api/axiosInstance";
 export default function MyInformation() {
   const [userData, setUserData] = useState({ name: "", nickname: "" });
   const tokenData = localStorage.getItem("token");
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (tokenData) {
@@ -21,8 +22,15 @@ export default function MyInformation() {
         .catch((error) => {
           console.error("Error fetching user data:", error);
         });
+    } else {
+      navigate("/mypage");
     }
-  }, [tokenData]);
+  }, [tokenData, navigate]);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/login"); // 로그아웃 후 리디렉션할 페이지
+  };
 
   return (
     <>
@@ -36,7 +44,7 @@ export default function MyInformation() {
             별명: {userData.nickname}
           </p>
           <div className={styles.buttonDiv}>
-            <button type="submit" className={styles.btn}>
+            <button type="submit" className={styles.btn} onClick={handleLogout}>
               로그아웃
             </button>
           </div>
