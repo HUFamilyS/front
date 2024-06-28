@@ -1,19 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import styles from "../../css/recmain.module.css";
+import styles from "../../css/writebutton.module.css";
 import { useNavigate } from "react-router-dom";
 import recipImg from "../../img/recipeImg.png";
 
-function Button() {
+function WriteButton() {
     const navigate = useNavigate();
     return (
         <>
       <div className={styles.my}>
-        <Link to="/view"><div className={styles.menuDiv}>
+        <Link to="/write"><div className={styles.menuDiv}>
           <div className={styles.content}>
-            <img src={recipImg}></img>
-            <span>불닭마요덮밥</span>
+            <span>+레시피 작성하기</span>
           </div>
         </div>
         </Link>
@@ -22,4 +21,4 @@ function Button() {
     );
 }
 
-export default Button;
+export default WriteButton;
