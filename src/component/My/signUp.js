@@ -83,8 +83,8 @@ export default function SignUp() {
               </div>
             ))}
             <div className={styles.buttonDiv}>
-              <button type="submit" className={styles.btn}>
-                회원가입
+              <button className={styles.btn} type="submit">
+                <div>회원가입</div>
               </button>
             </div>
           </form>
