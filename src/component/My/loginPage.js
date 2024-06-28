@@ -6,17 +6,19 @@ import axiosInstance from "../../api/axiosInstance";
 
 export default function Login() {
   const navigate = useNavigate();
-  const [nickname, setNickname] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axiosInstance.post("/login", {
-        nickname,
+      const response = await axiosInstance.post("/login", {
+        email,
         password,
       });
+
       alert("로그인에 성공했습니다!");
+
       navigate("/"); // 로그인 성공 시 메인 페이지로 이동
     } catch (error) {
       console.error("로그인 중 오류 발생:", error);
@@ -33,12 +35,12 @@ export default function Login() {
           <img src={logo} alt="Logo" />
           <form onSubmit={handleSubmit}>
             <div className={styles.inputDiv}>
-              <span>별명</span>
+              <span>이메일</span>
               <input
                 type="text"
-                placeholder="자신의 별명을 입력하세요"
-                value={nickname}
-                onChange={(e) => setNickname(e.target.value)}
+                placeholder="자신의 이메일을 입력하세요"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className={styles.inputDiv}>
