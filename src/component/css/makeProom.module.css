@@ -12,6 +12,26 @@ h3 {
   margin: 0;
 }
 
+.roomlist {
+  display: flex;
+  flex-direction: row;
+
+  height: 100px;
+  width: 300px;
+  background-color: #ffffff;
+}
+
+.room {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.discount {
+  color: #45bc53;
+  font-size: larger;
+}
+
 button {
   width: 160px;
   height: 57px;
@@ -20,27 +40,4 @@ button {
   border: 0;
   color: #878787;
   margin-top: 20px; /* 버튼 위에 여백 추가 */
-}
-
-.rooms {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* 진행 중인 방 목록 중앙 정렬 */
-  margin-top: 20px; /* 방 목록 위에 여백 추가 */
-  width: 100%;
-}
-
-.rooms h4 {
-  align-self: flex-start;
-  width: 100%;
-  margin: 0;
-}
-
-.room {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  text-align: center;
 }

@@ -1,24 +1,36 @@
 import { useNavigate } from "react-router-dom";
 import styles from "../css/purchase.module.css";
+import vegetables from "../img/vegetable.svg";
+import rice from "../img/rice.svg";
+import chicken from "../img/chicken.svg";
+import fruit from "../img/fruit.svg";
+import egg from "../img/egg.svg";
+import fish from "../img/fish.svg";
+import protein from "../img/protein.svg";
+import creatin from "../img/creatin.svg";
+import bcaa from "../img/bcaa.svg";
+import vitamin from "../img/vitamin.svg";
+import arginine from "../img/arginine.svg";
+import omega3 from "../img/omega3.svg";
 
 export default function Purchase() {
   const foodItems = [
-    { id: 1, name: "야채/채소" },
-    { id: 2, name: "쌀/잡곡/즉석밥" },
-    { id: 3, name: "닭가슴살" },
-    { id: 4, name: "과일" },
-    { id: 5, name: "우유/계란" },
-    { id: 6, name: "생선" },
+    { id: 1, name: "야채/채소", imageUrl: vegetables },
+    { id: 2, name: "쌀/잡곡/즉석밥", imageUrl: rice },
+    { id: 3, name: "닭가슴살", imageUrl: chicken },
+    { id: 4, name: "과일", imageUrl: fruit },
+    { id: 5, name: "우유/계란", imageUrl: egg },
+    { id: 6, name: "생선", imageUrl: fish },
   ];
   const supplementItems = [
-    { id: 7, name: "프로틴" },
-    { id: 8, name: "크레아틴" },
-    { id: 9, name: "BCAA" },
+    { id: 7, name: "프로틴", imageUrl: protein },
+    { id: 8, name: "크레아틴", imageUrl: creatin },
+    { id: 9, name: "BCAA", imageUrl: bcaa },
   ];
   const vitaminItems = [
-    { id: 10, name: "" },
-    { id: 11, name: "" },
-    { id: 12, name: "" },
+    { id: 10, name: "멀티비타민", imageUrl: vitamin },
+    { id: 11, name: "아르기닌", imageUrl: arginine },
+    { id: 12, name: "오메가3", imageUrl: omega3 },
   ];
   const navigate = useNavigate();
 
@@ -46,7 +58,13 @@ export default function Purchase() {
                 key={item.id}
                 onClick={() => goToPage(item.id)}
               >
-                <div className={styles.item}></div>
+                <div className={styles.item}>
+                  <img
+                    src={item.imageUrl}
+                    alt={item.name}
+                    className={styles.itemImage}
+                  />
+                </div>
                 <div className={styles.itemName}>{item.name}</div>
               </div>
             ))}
@@ -61,7 +79,13 @@ export default function Purchase() {
                 key={item.id}
                 onClick={() => goToPage(item.id)}
               >
-                <div className={styles.item}></div>
+                <div className={styles.item}>
+                  <img
+                    src={item.imageUrl}
+                    alt={item.name}
+                    className={styles.itemImage}
+                  />
+                </div>
                 <div className={styles.itemName}>{item.name}</div>
               </div>
             ))}
@@ -76,7 +100,13 @@ export default function Purchase() {
                 key={item.id}
                 onClick={() => goToPage(item.id)}
               >
-                <div className={styles.item}></div>
+                <div className={styles.item}>
+                  <img
+                    src={item.imageUrl}
+                    alt={item.name}
+                    className={styles.itemImage}
+                  />
+                </div>
                 <div className={styles.itemName}>{item.name}</div>
               </div>
             ))}
