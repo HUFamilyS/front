@@ -21,23 +21,10 @@
     background-origin: border-box;
     background-clip: padding-box, border-box;
   }
-  .baner {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    
-  }
-  .baner {
-    margin: 10px 0px 0px 20px;
-    padding: 10px;
-    border: 1.5px solid transparent;
-    border-radius: 10px;
-    width: 80%;
-  }
   .category {
     display: flex;
     justify-content: flex-start;
-    margin-left: 20px;
+    margin-left: 30px;
     color: #3e3e3e;
   }
   .content {

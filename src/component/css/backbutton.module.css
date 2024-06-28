@@ -3,6 +3,10 @@
     flex-direction: column;
     justify-content: flex-start;
   }
+  .row{
+    display: flex;
+    justify-content: flex-start;
+  }
   .menuDiv {
     display: flex;
     flex-direction: column;
@@ -20,8 +24,8 @@
     background-origin: border-box;
     background-clip: padding-box, border-box;
     position: fixed;
-    bottom: 90px;
-    left: 130px;
+    top: 90px;
+    left: -5px;
     z-index: 10000;
   }
   .category {
@@ -35,6 +39,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    top: 93px;
+    left: 10px;
+    z-index: 10000;
   }
   .content span {
     margin-left: 4px;
@@ -42,3 +50,12 @@
     font-weight: bolder;
   }
   
+  .back-image {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: -5px;
+    z-index: 10000;
+}

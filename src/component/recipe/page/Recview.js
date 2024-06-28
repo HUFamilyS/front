@@ -9,9 +9,11 @@ export default function Recview() {
   const navigate = useNavigate();
   return (
     <>
-      <div>
-        <h3>레시피 추천</h3>
+      <div className={styles.my}>
+        <div className={styles.row}>
         <BackButton />
+          <h3 className={styles.category}>레시피 추천</h3>
+          </div>
           <div className={styles.menuDiv}>
             <div className={styles.contentname}>
              <span>닭가슴살 볶음밥</span>

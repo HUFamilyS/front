@@ -6,7 +6,7 @@
   .category {
     display: flex;
     justify-content: flex-start;
-    margin-left: 20px;
+    margin-left: 30px;
     color: #3e3e3e;
   }
   .categoryDetail {

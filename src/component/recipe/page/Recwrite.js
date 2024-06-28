@@ -14,8 +14,9 @@ export default function Recwrite() {
   return (
     <>
       <div>
-        <h3>레시피 추천</h3>
-        <BackButton />
+      <BackButton />
+      <h3 className={styles.category}>레시피 추천</h3>
+        
          {inputs.map((input, index) => (
             <div key={index} className={styles.inputDiv}>
               <span>{input.label}</span>
