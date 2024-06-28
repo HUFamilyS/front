@@ -13,7 +13,7 @@ const menuItems = [
   { src: my, label: "MY", path: "/mypage" },
 ];
 
-export default function Navbar() {
+export default function Footer() {
   return (
     <div className={styles.footerContainer}>
       {menuItems.map((item, index) => (
