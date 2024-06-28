@@ -28,11 +28,12 @@ export default function Purchase() {
 
   return (
     <div className={styles.purchaseContainer}>
-      <div className={styles.name}>
-        <h3>공동구매</h3>
-        <div className={styles.box}>
-          <div>오늘도 OOO명이나 구매 완료했어요!</div>
-          <div>필요한 물품이 있는지 찾아보세요</div>
+      <h3 className={styles.category}>공동구매</h3>
+      <div className={styles.box}>
+        <div className={styles.message}>
+          오늘도 OOO명이나 구매 완료했어요!
+          <br />
+          필요한 물품이 있는지 찾아보세요.
         </div>
       </div>
       <div className={styles.itemContainer}>
