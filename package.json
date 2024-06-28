@@ -10,7 +10,15 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.24.0",
     "react-scripts": "5.0.1",
+<<<<<<< HEAD
     "recoil": "^0.7.7",
+=======
+<<<<<<< Updated upstream
+=======
+    "recoil": "^0.7.7",
+    "styled-components": "^6.1.11",
+>>>>>>> Stashed changes
+>>>>>>> 6da260e875c819dc1ce65b5a81490f5bc69165e1
     "web-vitals": "^2.1.4"
   },
   "scripts": {
