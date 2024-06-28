@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import WriteButton from "../rec_ui/rec_writebutton";
 import BackButton from "../rec_ui/rec_back";
 import styles from "../../css/recview.module.css";
@@ -11,26 +11,23 @@ export default function Recview() {
     <>
       <div className={styles.my}>
         <div className={styles.row}>
-        <BackButton />
+          <BackButton />
           <h3 className={styles.category}>레시피 추천</h3>
+        </div>
+        <div className={styles.menuDiv}>
+          <div className={styles.contentname}>
+            <span>닭가슴살 볶음밥</span>
           </div>
-          <div className={styles.menuDiv}>
-            <div className={styles.contentname}>
-             <span>닭가슴살 볶음밥</span>
-            </div>
-            <div className={styles.content}>
+          <div className={styles.content}>
             <img src={recipImg}></img>
           </div>
-         </div>
-         <div className={styles.contenting}>
-             <span>재료: 숙주, 닭가슴살, 밥</span>
-            </div>
-            <div className={styles.contentrec}>
-             <span>레시피: 
-
-              1. 닭가슴살을 볶는다.
-             </span>
-            </div>
+        </div>
+        <div className={styles.contenting}>
+          <span>재료: 숙주, 닭가슴살, 밥</span>
+        </div>
+        <div className={styles.contentrec}>
+          <span>레시피: 1. 닭가슴살을 볶는다.</span>
+        </div>
       </div>
     </>
   );
