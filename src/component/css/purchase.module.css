@@ -1,0 +1,62 @@
+.purchaseContainer {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid red;
+  padding: 20px;
+  justify-content: space-around;
+  align-items: center; /* 수평 중앙 정렬 */
+}
+.name {
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 수평 중앙 정렬 */
+  justify-content: center; /* 수직 중앙 정렬 */
+  margin: 10px 50px;
+  height: 97px;
+  width: 327px;
+  border-radius: 10px;
+  background-color: #45bc53;
+  color: #ffffff;
+}
+
+h3 {
+  text-align: left;
+}
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* 섹션 간의 간격 추가 */
+}
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 중앙 정렬 추가 */
+  margin: 5px; /* 여백 추가 */
+  flex: 1 1 calc(33.333% - 20px); /* 한 줄에 3개씩 배치, 여백 제외 */
+  box-sizing: border-box; /* 패딩과 경계 너비를 포함하여 크기 계산 */
+  max-width: calc(33.333% - 20px); /* 한 줄에 3개씩 배치, 여백 제외 */
+}
+
+.item {
+  width: 89px;
+  height: 89px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.itemName {
+  font-size: small;
+  text-align: center;
+}
