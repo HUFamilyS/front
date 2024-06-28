@@ -2,31 +2,41 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
+  background-color: #ebebeb;
+  padding: 20px;
+  height: 100vh;
 }
 
-.category {
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 20px;
-  color: #3e3e3e;
+h3 {
+  align-self: flex-start;
+  margin: 0;
 }
 
 .roomlist {
   display: flex;
-  flex-direction: center;
-  justify-content: space-evenly;
-
+  flex-direction: row;
   height: 100px;
   width: 300px;
   background-color: #ffffff;
 }
 
 .room {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  height: 70%;
+  padding: 20px;
+  margin: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-size: 20px;
+  box-sizing: border-box;
   text-align: center;
 }
+
 .discount {
   color: #45bc53;
   font-size: larger;
@@ -40,4 +50,5 @@ button {
   border: 0;
   color: #878787;
   margin-top: 20px; /* 버튼 위에 여백 추가 */
+  font-size: 20px;
 }

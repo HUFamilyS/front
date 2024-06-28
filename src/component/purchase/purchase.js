@@ -35,7 +35,8 @@ export default function Purchase() {
   const navigate = useNavigate();
 
   const goToPage = (id) => {
-    navigate(`/purchase/${id}`);
+    navigate(`/purchase/${id}`, { state: { itemId: id } });
+    console.log(id);
   };
 
   return (

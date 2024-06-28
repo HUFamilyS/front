@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import styles from "../css/makeProom.module.css";
 
 export default function MakeProom() {
   const [rooms, setRooms] = useState([]); // 진행 중인 방 상태
   const navigate = useNavigate();
-
+  const location = useLocation();
+  const { itemId } = location.state || {};
   const handleButtonClick = () => {
-    navigate("/purchase/form");
+    navigate("/purchase/form", { state: { itemId } });
     setRooms([
       ...rooms,
       { id: rooms.length + 1, name: `Room ${rooms.length + 1}` },
