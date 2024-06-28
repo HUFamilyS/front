@@ -7,6 +7,7 @@ import Loading from "./component/loading/loading";
 
 import "../src/App.css";
 import Purchase from "./component/purchase/purchase";
+import MakeProom from "./component/purchase/makeProom";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="/loading" element={<Loading />} />
             <Route path="/purchase" element={<Purchase />} />
+            <Route path="/purchase/:id" element={<MakeProom />} />
           </Routes>
         </div>
         <Footer />

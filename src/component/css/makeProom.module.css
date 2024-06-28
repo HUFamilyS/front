@@ -1,0 +1,13 @@
+.roomContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #ebebeb;
+}
+button {
+  width: 134px;
+  height: 57px;
+  background-color: #ffffff;
+  border-radius: 10%;
+  border: 0;
+}
