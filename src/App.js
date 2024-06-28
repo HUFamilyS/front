@@ -8,7 +8,6 @@ import MY from "./component/My/myPage";
 import SignUp from "./component/My/signUp";
 import Recipe from "./component/recipe/page/Recmain";
 
-
 import "../src/App.css";
 import Purchase from "./component/purchase/purchase";
 import MakeProom from "./component/purchase/makeProom";
@@ -26,11 +25,10 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/purchase" element={<Purchase />} />
             <Route path="/purchase/:id" element={<MakeProom />} />
-            <Route path="/Recmain" element={<Recipe />}/>
-            
-          </Routes><Footer />
+            <Route path="/recipe" element={<Recipe />} />
+          </Routes>
         </div>
-        
+        <Footer />
       </BrowserRouter>
     </div>
   );
