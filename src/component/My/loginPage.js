@@ -21,12 +21,12 @@ export default function Login() {
         password,
       });
 
-      const { token } = response.data;
-      localStorage.setItem("token", token);
+      localStorage.setItem("token", response.data.token);
       setIsLoggedIn(true); // 로그인 성공시 로그인 상태를 true로 변경
 
       console.log(localStorage.getItem("token"));
-
+      alert(response.data.token);
+      alert(localStorage.getItem("token"));
       alert("로그인에 성공했습니다!");
 
       navigate("/"); // 로그인 성공 시 메인 페이지로 이동
