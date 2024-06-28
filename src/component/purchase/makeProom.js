@@ -8,7 +8,6 @@ export default function MakeProom() {
 
   const handleButtonClick = () => {
     navigate("/purchase/form");
-    // 임의로 진행 중인 방을 추가하는 예제
     setRooms([
       ...rooms,
       { id: rooms.length + 1, name: `Room ${rooms.length + 1}` },
@@ -16,18 +15,19 @@ export default function MakeProom() {
   };
 
   return (
-    <>
-      <div className={styles.roomContainer}>
-        <h3>공동구매</h3>
-        <button onClick={handleButtonClick}>+공구방만들기</button>
+    <div className={styles.roomContainer}>
+      {rooms.length > 0 && (
         <div className={styles.rooms}>
+          <h4>진행 중인 방</h4>
           {rooms.map((room) => (
             <div key={room.id} className={styles.room}>
               {room.name}
             </div>
           ))}
         </div>
-      </div>
-    </>
+      )}
+      <h3>공동구매</h3>
+      <button onClick={handleButtonClick}>+공구방만들기</button>
+    </div>
   );
 }

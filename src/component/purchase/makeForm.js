@@ -28,7 +28,6 @@ export default function MakeForm() {
     <>
       <div className={styles.formContainer}>
         <h3>공동구매</h3>
-
         <div>
           {inputs.map((input, index) => (
             <div key={index} className={styles.inputDiv}>

@@ -14,6 +14,7 @@ h3 {
 
 button {
   width: 160px;
+  height: 57px;
   background-color: #ffffff;
   border-radius: 10%;
   border: 0;
@@ -26,6 +27,13 @@ button {
   flex-direction: column;
   align-items: center; /* 진행 중인 방 목록 중앙 정렬 */
   margin-top: 20px; /* 방 목록 위에 여백 추가 */
+  width: 100%;
+}
+
+.rooms h4 {
+  align-self: flex-start;
+  width: 100%;
+  margin: 0;
 }
 
 .room {
