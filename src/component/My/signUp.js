@@ -51,7 +51,7 @@ export default function SignUp() {
         email: formData.email,
         password: formData.password,
       });
-
+      console.log(response);
       if (response.status === 200) {
         alert("회원가입이 완료되었습니다.");
         navigate("/"); // 회원가입 후 홈으로 이동
@@ -85,8 +85,8 @@ export default function SignUp() {
               </div>
             ))}
             <div className={styles.buttonDiv}>
-              <button type="submit" className={styles.btn}>
-                회원가입
+              <button className={styles.btn} type="submit">
+                <div>회원가입</div>
               </button>
             </div>
           </form>
