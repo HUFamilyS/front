@@ -11,6 +11,7 @@ import Recipe from "./component/recipe/page/Recmain";
 import "../src/App.css";
 import Purchase from "./component/purchase/purchase";
 import MakeProom from "./component/purchase/makeProom";
+import MakeForm from "./component/purchase/makeForm";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/purchase" element={<Purchase />} />
             <Route path="/purchase/:id" element={<MakeProom />} />
+            <Route path="/purchase/form" element={<MakeForm />} />
             <Route path="/recipe" element={<Recipe />} />
           </Routes>
         </div>

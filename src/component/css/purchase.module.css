@@ -6,37 +6,46 @@
   justify-content: space-around;
   align-items: center; /* 수평 중앙 정렬 */
 }
+
 .name {
   display: flex;
   flex-direction: column;
+  align-items: center; /* 수평 중앙 정렬 */
+  text-align: center; /* 텍스트 가운데 정렬 */
 }
-
+.name h3 {
+  align-self: flex-start; /* name 클래스의 h3 요소를 왼쪽 정렬 */
+  margin: 0; /* 기본 마진 제거 */
+  width: 100%; /* 부모 요소 전체 너비 사용 */
+}
 .box {
   display: flex;
   flex-direction: column;
   align-items: center; /* 수평 중앙 정렬 */
   justify-content: center; /* 수직 중앙 정렬 */
-  margin: 10px 50px;
-  height: 97px;
-  width: 327px;
+  margin: 10px; /* 모바일에서 마진 설정 */
+  padding: 10px; /* 내부 패딩 추가 */
   border-radius: 10px;
   background-color: #45bc53;
   color: #ffffff;
 }
 
 h3 {
-  text-align: left;
+  text-align: left; /* 모바일에서 텍스트 왼쪽 정렬 */
+  margin: 10px;
 }
+
 .itemContainer {
   display: flex;
   flex-direction: column;
   gap: 10px; /* 섹션 간의 간격 추가 */
 }
+
 .section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 10px;
+  margin: 10px; /* 모바일에서 마진 설정 */
 }
 
 .category {
@@ -44,14 +53,14 @@ h3 {
   flex-direction: column;
   align-items: center; /* 중앙 정렬 추가 */
   margin: 5px; /* 여백 추가 */
-  flex: 1 1 calc(33.333% - 20px); /* 한 줄에 3개씩 배치, 여백 제외 */
+  flex: 1 1 calc(33.333% - 10px); /* 모바일에서 한 줄에 3개씩 배치 */
+  max-width: calc(33.333% - 10px); /* 모바일에서 한 줄에 3개씩 배치 */
   box-sizing: border-box; /* 패딩과 경계 너비를 포함하여 크기 계산 */
-  max-width: calc(33.333% - 20px); /* 한 줄에 3개씩 배치, 여백 제외 */
 }
 
 .item {
-  width: 89px;
-  height: 89px;
+  width: 70px; /* 모바일에서 작은 아이템 크기 */
+  height: 70px;
   border: 1px solid black;
   border-radius: 50%;
 }
