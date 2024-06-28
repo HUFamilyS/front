@@ -16,7 +16,7 @@ export default function MakeProom() {
 
   return (
     <div className={styles.roomContainer}>
-      <h3>공동구매</h3>
+      <h3 className={styles.category}>공동구매</h3>
       <div className={styles.roomlist}>
         {rooms.map((room) => (
           <div key={room.id} className={styles.room}>
