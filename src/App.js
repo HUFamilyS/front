@@ -10,6 +10,8 @@ import SignUp from "./component/My/signUp";
 import Login from "./component/My/loginPage";
 import MyInformation from "./component/My/myInformation";
 import Recipe from "./component/recipe/page/Recmain";
+import View from "./component/recipe/page/Recview";
+import Write from "./component/recipe/page/Recwrite";
 
 import "../src/App.css";
 import Purchase from "./component/purchase/purchase";

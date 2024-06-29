@@ -6,20 +6,21 @@ import { useNavigate } from "react-router-dom";
 import recipImg from "../../img/recipeImg.png";
 
 function Button() {
-    const navigate = useNavigate();
-    return (
-        <>
+  const navigate = useNavigate();
+  return (
+    <>
       <div className={styles.my}>
-        <Link to="/view"><div className={styles.menuDiv}>
-          <div className={styles.content}>
-            <img src={recipImg}></img>
-            <span>불닭마요덮밥</span>
+        <Link to="/view">
+          <div className={styles.menuDiv}>
+            <div className={styles.content}>
+              <img src={recipImg}></img>
+              <span>불닭마요덮밥</span>
+            </div>
           </div>
-        </div>
         </Link>
       </div>
     </>
-    );
+  );
 }
 
 export default Button;
