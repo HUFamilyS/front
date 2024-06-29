@@ -7,9 +7,8 @@
 .menuDiv {
   display: flex;
   flex-direction: column;
-  align-items: center; /* 수정: 중앙 정렬 */
+  align-items: center; /* 중앙 정렬 */
   justify-content: center;
-  margin: 10px 0px 0px 20px;
   padding: 10px;
   border: 1.5px solid transparent;
   border-radius: 10px;
@@ -19,10 +18,10 @@
   background-origin: border-box;
   background-clip: padding-box, border-box;
   position: fixed;
-  bottom: 20px; /* 수정: 하단에서 20px 위로 */
-  left: 50%; /* 수정: 왼쪽에서 50% */
-  transform: translateX(-50%); /* 수정: X축으로 -50% 이동하여 중앙 정렬 */
-  z-index: 10000;
+  bottom: 5.5rem; /* 푸터 높이 + 간격 */
+  left: 50%; /* 왼쪽에서 50% */
+  transform: translateX(-50%); /* X축으로 -50% 이동하여 중앙 정렬 */
+  z-index: 1001; /* 푸터보다 높은 z-index */
 }
 
 .content {
@@ -36,4 +35,33 @@
   margin-left: 5px;
   color: #878787;
   font-weight: bolder;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  position: fixed; /* fixed로 변경 */
+  height: 5rem; /* 푸터 높이 설정 */
+  width: 100%;
+  background-color: white; /* 배경 색상을 추가해 겹치는 부분 명확히 */
+  z-index: 1000; /* 다른 요소 위에 고정 */
+}
+
+.menuContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 0.05em solid;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column; /* column 방향으로 변경 */
+  align-items: center;
+  color: #868686;
+  text-decoration-line: none;
+  margin: 10px;
+  filter: invert(68%) sepia(7%) saturate(0%) hue-rotate(180deg) brightness(87%)
+    contrast(84%);
 }

@@ -28,7 +28,7 @@ export default function Recwrite() {
       <div>
         <div className={styles.title}>
           <button className={styles.backButton} onClick={handleBackClick}>
-            🔙
+            ⬅️
           </button>
           <h3 className={styles.category}>레시피 추천</h3>
         </div>
@@ -39,7 +39,11 @@ export default function Recwrite() {
           </div>
         ))}
         <div className={styles.buttonDiv}>
-          <button className={styles.btn} type="submit">
+          <button
+            className={styles.btn}
+            type="submit"
+            onClick={handleBackClick}
+          >
             <div>제출하기</div>
           </button>
         </div>
