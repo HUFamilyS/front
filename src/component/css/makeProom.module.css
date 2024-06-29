@@ -6,6 +6,7 @@
   background-color: #ebebeb;
   padding: 20px;
   height: 100vh;
+  box-sizing: border-box;
 }
 
 h3 {
@@ -13,42 +14,68 @@ h3 {
   margin: 0;
 }
 
-.roomlist {
+.roomDiv {
   display: flex;
   flex-direction: row;
-  height: 100px;
-  width: 300px;
-  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 10px;
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  width: 80%;
+  background-image: linear-gradient(white, white),
+    linear-gradient(to right, #45bc53, #205626);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
 .room {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-  width: 70%;
-  height: 70%;
-  padding: 20px;
-  margin: 10px;
+  text-align: left;
+  padding: 10px;
+  margin: 5px;
   background-color: #ffffff;
-  border-radius: 10px;
-  font-size: 20px;
-  box-sizing: border-box;
-  text-align: center;
-}
+  font-size: 10px;
+  font-weight: bolder;
+  /* box-sizing: border-box; */
 
+  cursor: "pointer";
+}
+.buying,
+.people,
+.date {
+  margin: 5px 0;
+}
 .discount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
   color: #45bc53;
-  font-size: larger;
 }
 
-button {
-  width: 160px;
-  height: 57px;
-  background-color: #ffffff;
-  border-radius: 10%;
-  border: 0;
-  color: #878787;
-  margin-top: 20px; /* 버튼 위에 여백 추가 */
-  font-size: 20px;
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.btn {
+  margin: 10px;
+  border: 1px solid #45bc53;
+  padding: 20px;
+  width: 30%;
+  font-weight: bolder;
+  text-decoration-line: none;
+  color: #45bc53;
+}
+.btn:hover {
+  background-color: #45bc53;
+  opacity: 0.5;
+  color: white;
+  cursor: pointer;
 }
